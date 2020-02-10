@@ -234,7 +234,7 @@ SELECT stud_id, Name, B.course_id FROM Student NATURAL JOIN (SELECT stud_id, A.c
 
 SELECT Name, course_id FROM Student LEFT JOIN Attends ON Attends.stud_id = Student.stud_id;
 
-SELECT dependant_name, age FROM Dependant NATURAL JOIN (SELECT * FROM Professor) AS A WHERE prof_name = 'Amit Awekar';
+CREATE VIEW cd AS SELECT dependant_name, age FROM Dependant NATURAL JOIN (SELECT * FROM Professor) AS A WHERE prof_name = 'Amit Awekar';
 
-CREATE VIEW cd AS SELECT prof_id, prof_name FROM Professor NATURAL JOIN (SELECT DISTINCT prof_id FROM researchArea WHERE areaName = 'Data Mining' OR areaName = 'ML') AS A;
+SELECT prof_id, prof_name FROM Professor NATURAL JOIN (SELECT DISTINCT prof_id FROM researchArea WHERE areaName = 'Data Mining' OR areaName = 'ML') AS A;
 
