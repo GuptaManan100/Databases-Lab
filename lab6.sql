@@ -162,7 +162,7 @@ BEGIN
 			SET grad = 'BC';
 		WHEN 8 THEN 
 			SET grad = 'BB';
-		WHEN 5 THEN 
+		WHEN 9 THEN 
 			SET grad = 'AB';
 		ELSE
 			set grad = 'AA';
